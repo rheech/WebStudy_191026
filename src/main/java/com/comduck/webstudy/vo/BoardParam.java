@@ -11,5 +11,4 @@ public class BoardParam {
 	public void setPkNumber(int pkNumber) {
 		this.pkNumber = pkNumber;
 	}
-	
 }

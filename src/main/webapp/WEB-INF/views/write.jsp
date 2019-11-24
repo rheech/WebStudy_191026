@@ -8,9 +8,10 @@
 <body>
 <h1>글쓰기</h1>
 <form action="submit.do" method="post">
-    <label>이름:</label><input type="text" name="author" /><br />
-    <label>제목:</label><input type="text" name="title" /><br />
-    <textarea rows="10" cols="50" name="text"></textarea><br />
+    <label for="author">이름:</label><input type="text" id="author" name="author" /><br />
+    <label for="title">제목:</label><input type="text" id="title" name="title" /><br />
+    <label for="text">본문</label>
+    <textarea rows="10" cols="50" id="text" name="text"></textarea><br />
     <input type="submit" value="등록하기" /> <input type="button" value="목록보기" onclick="history.back(-1);">
 </form>
 </body>

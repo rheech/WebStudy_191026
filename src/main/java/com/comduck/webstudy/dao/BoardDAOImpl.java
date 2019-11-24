@@ -40,7 +40,6 @@ public class BoardDAOImpl implements BoardDAO {
 
     @Override
     public List<BoardVO> listAll() {
-        //return sqlSession.selectList(String.format("%s.%s", NAMESPACE, "BoardMapper.listAll"));
         return boardMapper.listAll();
     }
 
@@ -51,12 +50,6 @@ public class BoardDAOImpl implements BoardDAO {
 
 	@Override
 	public void inputList(BoardVO boardVO) {
-		//boardMapper.inputList(boardVO);
-//        boardVO.setBoardNum(1);
-        //boardVO.setRegDate(new Date());
-        //boardVO.setViewCount(1);
-
-        //sqlSession.insert("BoardMapper.inputList", boardVO);
         boardMapper.inputList(boardVO);
 	}
 

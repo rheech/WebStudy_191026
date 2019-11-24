@@ -1,8 +1,6 @@
 package com.comduck.webstudy.service;
 
-import com.comduck.webstudy.dao.BoardDAO;
 import com.comduck.webstudy.dao.BoardDAOImpl;
-import com.comduck.webstudy.vo.BoardParam;
 import com.comduck.webstudy.vo.BoardVO;
 
 import org.springframework.stereotype.Service;

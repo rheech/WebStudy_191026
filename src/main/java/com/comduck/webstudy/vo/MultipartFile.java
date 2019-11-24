@@ -10,5 +10,4 @@ public class MultipartFile {
 	public void setFile(String file) {
 		this.file = file;
 	}
-	
 }

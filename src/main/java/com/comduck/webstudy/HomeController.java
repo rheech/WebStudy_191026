@@ -47,11 +47,4 @@ public class HomeController {
 		
 		return "home";
 	}
-
-//	@RequestMapping("/write.do")
-//	public String write(Model model) {
-//		return "write";
-//	}
-
-	
 }

@@ -1,6 +1,5 @@
 package com.comduck.webstudy.dao;
 
-import com.comduck.webstudy.vo.BoardParam;
 import com.comduck.webstudy.vo.BoardVO;
 
 import java.util.List;

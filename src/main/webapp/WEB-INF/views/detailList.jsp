@@ -21,7 +21,6 @@
         deleteform.submit();
     }
     function showPopup() {
-
         url = "<c:url value='/fileUpload.do'/>";
 
         var wnd = window.open (url, "FileUpload", "top=0, left=0, width=800, height=500, scrollbars=no,resizable=no ,status=no ,toolbar=no");
@@ -37,9 +36,10 @@
 <div id="sss"></div>
 <form id="viewForm" name="viewForm" method="post">
 	<input type="hidden" value="${detail.boardNum}" name="boardNum">
-    <label>이름:</label><input type="text" name="author" value="${detail.author}" readonly><br>
-    <label>제목:</label><input type="text" name="title" value="${detail.title}"/><br />
-    <textarea rows="10" cols="50" name="text">${detail.text}</textarea><br />
+    <label for="author">이름:</label><input type="text" id="author" name="author" value="${detail.author}" readonly><br>
+    <label for="title">제목:</label><input type="text" id="title" name="title" value="${detail.title}"/><br />
+    <label for="text">본문</label>
+    <textarea rows="10" cols="50" id="text" name="text">${detail.text}</textarea><br />
     <input type="button" value="목록보기" onclick="location.href='/'"> <br/>
     <input type="button" value="수정" onclick='fn_update()'> <br/>
     <input type="button" value="삭제" onclick='fn_delete()'> <br/>
