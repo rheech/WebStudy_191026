@@ -7,7 +7,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://www.cheonghyun.com:13306/spring_study" />
+		<property name="url" value="jdbc:mysql://www.cheonghyun.com:13306/spring_study?useUnicode=true&amp;characterEncoding=UTF-8" />
 		<property name="username" value="root" />
 		<property name="password" value="CornCake123#" />
 	</bean>
