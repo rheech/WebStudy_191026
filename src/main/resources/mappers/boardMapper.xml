@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.comduck.webstudy.dao.BoardMapper">
+    <resultMap id="board_vo" type="BOARD_VO" >
+        <result property="boardNum" column="ENTRY_NUM" />
+        <result property="title" column="TITLE" />
+        <result property="text" column="CONTENT" />
+        <result property="author" column="AUTHOR" />
+        <result property="regDate" column="REG_DATE" />
+        <result property="viewCount" column="VIEW_CNT" />
+    </resultMap>
+
+    <select id="listAll" resultMap="board_vo">
+        SELECT * FROM EXP_BOARD
+    </select>
+
+    <!-- INSERT INTO EXP_BOARD (TITLE, CONTENT, AUTHOR, REG_DATE, VIEW_CNT) VALUES ("A", "A", "A", NOW(), 1) -->
+    <insert id="inputList" parameterType="com.comduck.webstudy.vo.BoardVO">
+    	INSERT INTO EXP_BOARD (
+    		TITLE, CONTENT, AUTHOR, REG_DATE, VIEW_CNT
+    	) values (
+    		#{title}, #{text}, #{author}, NOW(), 0
+    	)
+    </insert>
+    
+    <select id="showDetail" parameterType="paramMap" resultMap="board_vo">
+    	SELECT ENTRY_NUM,TITLE, CONTENT, AUTHOR, REG_DATE, VIEW_CNT 
+    	from EXP_BOARD 
+    	WHERE ENTRY_NUM = #{pkNumber}
+    </select>
+    
+    <update id="updateViewCnt" parameterType="paramMap">
+    	update EXP_BOARD
+    	SET VIEW_CNT = #{viewCount} + 1
+    	WHERE  ENTRY_NUM = #{pkNumber}
+    </update>
+    
+    <update id="updateBoard" parameterType="paramMap">
+    	UPDATE EXP_BOARD SET
+    		TITLE = #{title}
+    		, CONTENT = #{text}
+    		, REG_DATE = NOW()
+    	WHERE ENTRY_NUM = #{pkNumber}
+    </update>
+    
+    <delete id="deleteBoard" parameterType="paramMap">
+    	delete from EXP_BOARD
+    	WHERE ENTRY_NUM = #{pkNumber}
+    </delete>
+</mapper>

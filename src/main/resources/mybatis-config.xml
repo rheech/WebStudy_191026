@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+    	<typeAlias alias="paramMap" type="java.util.Map"/>
+    	
+        <typeAlias alias="BOARD_VO" type="com.comduck.webstudy.vo.BoardVO" />
+        <typeAlias alias="BOARD_Param" type="com.comduck.webstudy.vo.BoardParam" />
+    </typeAliases>
+</configuration>
